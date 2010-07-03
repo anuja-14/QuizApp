@@ -1,0 +1,47 @@
+
+package marks2;
+public class MarksheetVO {
+		private String rollno=null;
+		private String name=null;
+		private int physics;
+		private int chemistry;
+		private int maths;
+		
+		public MarksheetVO()
+		{
+			
+		}
+		
+		public MarksheetVO(String rollno,String name,int phy,int chem,int math)
+		{
+			physics=phy;
+			chemistry=chem;
+			maths=math;
+			this.rollno=rollno;
+			this.name=name;
+		}
+		
+		public String getname()
+		{
+			return name;
+		}
+		
+		public String getRollno()
+		{
+			return rollno;
+		}
+		
+		public int getphy()
+		{
+			return physics;
+		}
+		public int getchem()
+		{
+			return chemistry;
+		}
+		public int getmaths()
+		{
+			return maths;
+		}
+
+}
