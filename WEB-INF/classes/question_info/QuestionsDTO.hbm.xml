@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="question_info">
+<class name="QuestionsDTO" table="Questions">
+<id name="id">
+<generator class="increment"/>
+</id>
+<property name="que" />
+<property name="diff" />
+<property name="opt1" />
+<property name="opt2" />
+<property name="opt3" />
+<property name="opt4" />
+<property name="ans" />
+<property name="comments" />
+</class>
+</hibernate-mapping>
