@@ -17,7 +17,7 @@ if(!(request.getAttribute("error")==null))
 Please Enter Your Username , Your new Password will be send to your E-mail id <br /><br />
 <form method="get" action="password">
 Email-id<input type="text" name="email" ><br /><br /
-<center><input type="submit" value="LOGIN"></center>
+<center><input type="submit" value="Submit"></center>
 
 </form>
 
