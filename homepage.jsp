@@ -36,7 +36,7 @@ if(!(error==null))
 }
 %>
  </font></center> <br><br><br>
-<form method="post" action="loginctl" onsubmit="return validate(this)">
+<form method="get" action="loginctl" onsubmit="return validate(this)">
 UserName<input type="text" name="username" ><br /><br />
 Password<input type="password" name="password"><br /><br />
 <center><input type="submit" value="LOGIN"></center>
