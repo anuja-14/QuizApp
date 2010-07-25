@@ -3,9 +3,7 @@
 <head>
 <script type="text/javascript" src="menu.js"></script>
 </head>
-<body>
-<H1>Test Menu</H1>
-
+<body bgcolor=green>
 <div style="padding:0;height:90%;"> 
   <script language="JavaScript" vqptag="doc_level_settings" is_vqp_html=1 
   vqp_datafile0="menu.js" vqp_uid0=859470>
@@ -13,17 +11,16 @@
   <script language="JavaScript" src="menu.js"></script>
   <script vqptag="placement" vqp_menuid="859470" language="JavaScript">
   create_menu(859470)
-  </script>
-  <center>
-  <br /><br /><br />
+  </script><br><br><br>
  <form action="levelctl" method="get">
- <big><input type="submit" name="level" value="BEGINNERS" \></big><br /><br /><br /><br />
- <big><input type="submit" name="level" value="MEDIOCHERS" \><br /><br /></big><br /><br />
-  <big><input type="submit" name="level" value="CHAMPION" \></big><br /><br /><br /><br />
+ <big><input type="submit" name="level" value="BEGINNERS" \></big><br /><br />
+ <big><input type="submit" name="level" value="MEDIOCHERS" \><br /><br /></big>
+  <big><input type="submit" name="level" value="CHAMPION" \></big>
  </form>
  </form>
  
-  </center>
+  <center>
+  <img src=linux_windows.jpg><img src=linux62.jpg><img src=linux-logo.jpg ></center> 
 </div>
 </body>
 </html>
