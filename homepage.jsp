@@ -21,12 +21,12 @@ return flag;
 
 
 </head>
-<body>
+<body bgcolor="0099FF">
 <p align=right><a href="password.jsp">forgot password??</a><br/><br/>
 <p align=right><a href="openid">use gmail or yahooid to login</a>
  <p align=right><a href="new_user.jsp">New User ??</a>
 </p>
-<center><font color=red> <%
+<center> <%
 String error = (String)request.getAttribute("err");
 if(!(error==null))
 { 
@@ -34,15 +34,20 @@ if(!(error==null))
 <%= error%>
 <%
 }
-%>
- </font></center> <br><br><br>
+%><table >
+<tr>
+<td bgcolor="silver">
+<br><br><br>
 <form method="get" action="loginctl" onsubmit="return validate(this)">
 UserName<input type="text" name="username" ><br /><br />
 Password<input type="password" name="password"><br /><br />
 <center><input type="submit" value="LOGIN"></center>
 
 </form>
-
+</td> 
+</tr> 
+</table>
+<marquee><img src="buygreen-linux-penguin.jpg"></marquee>
 </body>
 </html>
 <!--if(!(frm.password.value.equals(frm.re_password.value)))
