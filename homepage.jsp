@@ -22,9 +22,9 @@ return flag;
 
 </head>
 <body bgcolor="0099FF">
-<p align=right><a href="password.jsp">forgot password??</a><br/><br/>
+<b><u><p align=right><a href="password.jsp">Forgot password?</a><br/><br/>
 <p align=right><a href="openid">use gmail or yahooid to login</a>
- <p align=right><a href="new_user.jsp">New User ??</a>
+ <p align=right><a href="new_user.jsp">Register Here</a></u></b>
 </p>
 <center> <%
 String error = (String)request.getAttribute("err");
