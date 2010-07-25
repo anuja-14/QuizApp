@@ -53,12 +53,14 @@ public class levelctl extends HttpServlet
 		{
 			qs=(QuestionsDTO)iter.next();
 		}
-		id=qs.getId();
-		Integer id_ob = new Integer(id);
+		
 		session.setAttribute("list", question_list);
-		id_list.add(id_ob);
+		
 		session.setAttribute("id_list",id_list);
 		session.setAttribute("qs", qs);
+		session.setAttribute("qs_attempted", "0");
+		session.setAttribute("correct_ans", "0");
+
 		rd.forward(request,response);
 		
 		}catch(Exception e)
