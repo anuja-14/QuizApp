@@ -34,7 +34,7 @@ return flag;
 }
 </script>
 </head>
-<body>
+<body bgcolor=9999CC>
 <font color=red>
 <%
 if(!(request.getAttribute("error")==null))
@@ -45,14 +45,14 @@ if(!(request.getAttribute("error")==null))
 }
 %></font>
 <form method="get" action="New_account" onsubmit="return validate(this)">
-First Name<input type="text" name="firstName" ><br /><br />
-Last Name<input type="text" name="lastName" ><br /><br />
-*Email-ID<input type="text" name="email" ><br /><br />
-*UserName<input type="text" name="username" ><br /><br />
-*Password<input type="password" name="password" ><br /><br />
-*Re-password<input type="password" name="repassword" ><br /><br />
-ContactNumber<input type="text" name="contactNumber" ><br /><br />
-<input type=submit value=Submit name=submit>
+First Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="firstName" ><br /><br />
+Last Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="lastName" ><br /><br />
+*Email-ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="email" ><br /><br />
+*UserName &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="username" ><br /><br />
+*Password &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="password" name="password" ><br /><br />
+*Re-password &nbsp; &nbsp; &nbsp; &nbsp;<input type="password" name="repassword" ><br /><br />
+ContactNumber &nbsp; &nbsp; &nbsp;<input type="text" name="contactNumber" ><br /><br />
+<center> <input type=submit value=Submit name=submit></center> 
 </form>
 </body>
 </html>
