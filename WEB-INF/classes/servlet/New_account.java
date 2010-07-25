@@ -37,7 +37,7 @@ public class New_account extends HttpServlet
 		}
 		catch(Exception e)
 		{
-			request.setAttribute("error","Username Already Exists , please choose a Different Username" );
+			request.setAttribute("error","Username Already Exists , please choose a Different Username"+e.getMessage() );
 	    	RequestDispatcher rd = request.getRequestDispatcher("/new_user.jsp");
 	    	rd.forward(request, response);
 		}
