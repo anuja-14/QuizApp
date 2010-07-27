@@ -24,7 +24,7 @@ public class Password extends HttpServlet {
 	private static final String SMTP_HOST_NAME = "smtp.gmail.com";
 	private static final int SMTP_HOST_PORT = 465;
 	private static final String SMTP_AUTH_USER = "anujaagrw@gmail.com";
-	private static final String SMTP_AUTH_PWD = "bhaiyyapapa";
+	private static final String SMTP_AUTH_PWD = "latavijayarpit";
 	private static String from = "anujaagrw@gmail.com";
 	private static String to;
 	public void doGet(HttpServletRequest request,HttpServletResponse response)

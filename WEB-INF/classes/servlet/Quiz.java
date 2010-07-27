@@ -36,6 +36,7 @@ public class Quiz extends HttpServlet
 			if(req_ans.equals(qs.getAns()))
 			{
 				request.setAttribute("comment_submit","Congo!!Your Answer Was Right");
+				request.setAttribute("comment", qs.getComments());
 				while(iter1.hasNext())
 				{
 					Integer curr_id = (Integer) iter1.next();

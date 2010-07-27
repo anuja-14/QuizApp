@@ -30,6 +30,7 @@ public class levelctl extends HttpServlet
 		response.setContentType("text/html");
 		HttpSession session = request.getSession(true);
 		RequestDispatcher rd = request.getRequestDispatcher("/quiz.jsp");
+		qsv.prepareDatabase();
 		try
 		{
 		if(level.equals("BEGINNERS"))

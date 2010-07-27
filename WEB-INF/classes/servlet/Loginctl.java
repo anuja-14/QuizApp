@@ -8,8 +8,11 @@ import java.io.PrintWriter;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+
+import question_info.QuestionsService;
 
 public class Loginctl extends HttpServlet
 {
@@ -28,6 +31,8 @@ public class Loginctl extends HttpServlet
 		us=usv.getUserInfo(username);
 		if(us.getPassword().equals(password))
 		{
+			HttpSession session = request.getSession(true);
+			session.setAttribute("UserDTO",us);
 			RequestDispatcher rd = request.getRequestDispatcher("/login.jsp");
 			rd.forward(request,response);
 		}
@@ -38,15 +43,7 @@ public class Loginctl extends HttpServlet
 			RequestDispatcher rd = request.getRequestDispatcher("/homepage.jsp");
 			rd.forward(request,response);
 		}
-        out.println("<HTML>");
-        out.println("  <HEAD></HEAD>");
-        out.println("  <BODY>");
-        out.print("");
-        out.println("  </BODY>");
-        out.println("</HTML>");
-        out.flush();
-        out.close();
-        
+       
 		}
 		catch(Exception e)
 		{
