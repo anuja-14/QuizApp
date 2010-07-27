@@ -2,38 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<script type="text/javascript">
-function validate(frm)
-{
-var flag=true;
-if(frm.username.value=="")
-	{
-	alert("USERID CAN NOT BE NULL");
-	flag=false;
-	}	
-if(frm.password.value=="")
-	{
-	alert("PASSWORD CAN NOT BE NULL");
-	flag=false;
-	}
-	if(frm.email.value=="")
-	{
-	alert("Email-id CAN NOT BE NULL");
-	flag=false;
-	}	
-if(frm.repassword.value=="")
-	{
-	alert("repassword CAN NOT BE NULL");
-	flag=false;
-	}	
-	if(!(frm.password.value==frm.repassword.value))
-	{
-	alert("Passwords do not match");
-	flag=false;
-	}	
-return flag;
-}
-</script>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Shaastra-Distro Quizzing App</title>
 <meta name="keywords" content="free website templates, css templates, Metal Curve" />
@@ -78,54 +47,28 @@ return flag;
                  </div>
                  
                  <div class="service_text">
-                      <font color=red>
+                    
+ <center>
+  
   <%
-String comment = (String)request.getAttribute("comment_submit");
-if(!(comment==null))
-{ 
-%>
-<%= comment%>
-<%
-}
-%>
- <%
-QuestionsDTO qs = new QuestionsDTO();
-qs = (QuestionsDTO)session.getAttribute("qs");
-int id=qs.getId();
+String qs_answered = (String)session.getAttribute("qs_attempted");
+String corr_answered = (String)session.getAttribute("correct_ans");
 %>
 
-<table align="center">
+<table>
 <tr>
-<b><font color="red"><p align=right>* fields are mandatory</p><br/><br/></font></b>
-</tr>
-<tr>
-<td colspan=10>
-</td>
-<td background="qq_bod_cnter_x.jpg" width="1200" height="335" bgcolor="silver">
-<center><br>
-<form method="get" action="New_account" onsubmit="return validate(this)">
-First Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="firstName" ><br /><br />
-Last Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="lastName" ><br /><br />
-*Email-ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="email" ><br /><br />
-*UserName &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="username" ><br /><br />
-*Password &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="password" name="password" ><br /><br />
-*Re-password &nbsp; &nbsp; &nbsp; &nbsp;<input type="password" name="repassword" ><br /><br />
-ContactNumber &nbsp; &nbsp; &nbsp;<input type="text" name="contactNumber" ><br /><br />
+<td colspan="10">
 
 </td>
-</tr>
-<tr>
-<td colspan =10>
-</td>
-<td>
 
-<center> <input type=submit value=Submit name=submit></center> 
-</form>
+<td background="qq_bod_cnter_x.jpg" width="700" height="335" bgcolor="silver">
+<center> 
+<font color=red><h1> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;You Have Answered <%= corr_answered%> Question Correctly Out of <%=qs_answered%> </h1></b></font>
+
 </td>
+</center> 
 </tr>
 </table>
-</center> 
-</font> 
                  </div>
                  
             </div>

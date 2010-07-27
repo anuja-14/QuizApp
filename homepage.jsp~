@@ -74,7 +74,7 @@ return flag;
             	<div class="service_image">
                  </div>
                  <div class="service_text">
-                     <h2>Choose Your Level</h2>
+                     <h2>Login Here</h2>
                      <%
 String error = (String)request.getAttribute("err");
 if(!(error==null))
@@ -86,11 +86,11 @@ if(!(error==null))
 <%
 }
 %> 
-                    <form action="levelctl" method="get">
- <big><input type="submit" name="level" value="BEGINNERS" \></big><br /><br />
- <big><input type="submit" name="level" value="MEDIOCHERS" \><br /><br /></big>
-  <big><input type="submit" name="level" value="CHAMPION" \></big>
- </form>
+                     <form method="get" action="loginctl" onsubmit="return validate(this)">
+UserName<input type="text" name="username" ><br /><br />
+Password<input type="password" name="password"><br /><br />
+<center><input type="submit" value="LOGIN" ></center>
+
 </form>
                     
                  </div>
@@ -131,7 +131,7 @@ Linux.
                 
                 <ul class="recent_project">
                     
-                    Daskalos
+                    Daskalos :
                     <li><a href="http://www.shaastra.org/2010/main/events/coding/distro" target="_parent"><img src="images/templatemo_image_03.jpg" alt="image 3" /></a></li>
                         An application which is aimed at teaching you the basics of 
 
@@ -151,7 +151,7 @@ Linux.
               	</ul>  <br /><br /><br /><br />
                 <ul class="recent_project">
                     
-                    Shellom
+                    Shellom :
                     <li><a href="http://www.shaastra.org/2010/main/events/coding/distro" target="_parent"><img src="images/templatemo_image_06.jpg" alt="image 3" /></a></li>
                        Shellom is a tool to automate multi-step workflows by using a collection
 of simple tasks by interconnecting inputs and outputs to other inputs.

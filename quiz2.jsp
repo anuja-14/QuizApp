@@ -16,29 +16,15 @@ if(frm.password.value=="")
 	alert("PASSWORD CAN NOT BE NULL");
 	flag=false;
 	}
-	if(frm.email.value=="")
-	{
-	alert("Email-id CAN NOT BE NULL");
-	flag=false;
-	}	
-if(frm.repassword.value=="")
-	{
-	alert("repassword CAN NOT BE NULL");
-	flag=false;
-	}	
-	if(!(frm.password.value==frm.repassword.value))
-	{
-	alert("Passwords do not match");
-	flag=false;
-	}	
 return flag;
 }
+
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Shaastra-Distro Quizzing App</title>
 <meta name="keywords" content="free website templates, css templates, Metal Curve" />
 <meta name="description" content="Metal Curve Template is a free layout for everyone. All free CSS templates are provided by templatemo.com" />
-<link href="templatemo_style_quiz.css" rel="stylesheet" type="text/css" />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="templatemo_wrapper">
@@ -49,7 +35,7 @@ return flag;
             <li><a href="result.jsp" target="_parent">Result</a></li>
             <li><a href="password.jsp" target="_parent">Forgot Password?</a></li>
             <li><a href="new_user.jsp" target="_blank">Register Here</a></li>
-       
+            <li><a href="homepage.jsp" target="_blank">LogOut</a></li>
            
         </ul>    	
     </div> <!-- end of templatemo_menu -->
@@ -73,12 +59,9 @@ return flag;
         
      		<div class="service_box float_l">
             	 
-                 <div class="service_image">
-                 
-                 </div>
                  
                  <div class="service_text">
-                      <font color=red>
+                     <font color=red>
   <%
 String comment = (String)request.getAttribute("comment_submit");
 if(!(comment==null))
@@ -96,72 +79,43 @@ int id=qs.getId();
 
 <table align="center">
 <tr>
-<b><font color="red"><p align=right>* fields are mandatory</p><br/><br/></font></b>
-</tr>
-<tr>
-<td colspan=10>
+<td colspan=20>
 </td>
 <td background="qq_bod_cnter_x.jpg" width="1200" height="335" bgcolor="silver">
-<center><br>
-<form method="get" action="New_account" onsubmit="return validate(this)">
-First Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="firstName" ><br /><br />
-Last Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="lastName" ><br /><br />
-*Email-ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="email" ><br /><br />
-*UserName &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="username" ><br /><br />
-*Password &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="password" name="password" ><br /><br />
-*Re-password &nbsp; &nbsp; &nbsp; &nbsp;<input type="password" name="repassword" ><br /><br />
-ContactNumber &nbsp; &nbsp; &nbsp;<input type="text" name="contactNumber" ><br /><br />
-
-</td>
-</tr>
-<tr>
-<td colspan =10>
-</td>
-<td>
-
-<center> <input type=submit value=Submit name=submit></center> 
+<center>
+<form method="get" action="Quiz" ><br> <br><br>
+<%= qs.getQue()%><br><br>
+<INPUT TYPE="radio" NAME="option" value=a><%= qs.getOpt1()%><br><br>
+<INPUT TYPE="radio" NAME="option" value=b><%= qs.getOpt2()%><br><br>
+<INPUT TYPE="radio" NAME="option" value=c><%= qs.getOpt3()%><br><br>
+<INPUT TYPE="radio" NAME="option" value=d><%= qs.getOpt4()%><br><br>
+<input type="submit" name="submit" value="Submit"></center> 
 </form>
 </td>
 </tr>
 </table>
 </center> 
 </font> 
-                 </div>
+         </div>
                  
             </div>
             
-            <div class="service_box float_r">
             
-            	<div class="service_image"file:///var/lib/tomcat6/webapps/QuizApp/index.html>
-                 </div>
-                 <div class="service_text">
-                     
-                 </div>
-            	
-            </div>
-        	
         </div> <!-- main_service_section -->
         
         <div class="content_section">
         
         	<div class="section_410 float_l">
             	
-                
+               
               <div class="cleaner_h20"></div>
-                
+               
                  
                  <div class="cleaner_h20"></div>
-                
-                
-            </div>
-            
-            <div class="section_410 float_r">
-            
-            	
-              <div class="cleaner_h20"></div>
                  
             </div>
             
+           
         </div>
         
         <div class="cleaner_h20"></div>
@@ -181,4 +135,3 @@ ContactNumber &nbsp; &nbsp; &nbsp;<input type="text" name="contactNumber" ><br /
 </div> <!-- end of templatemo_wrapper -->
 </body>
 </html>
-

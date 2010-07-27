@@ -1,0 +1,41 @@
+<%@ page import="login.*,java.sql.*" %>
+<html>
+<head>
+
+
+
+</head>
+<body>
+<%
+try
+{
+String password = request.getParameter("password");
+		String username = request.getParameter("username");
+		UserDTO us = new UserDTO();
+		UserService usv = new UserService();
+		us = usv.getUserInfo(username);
+		if(us.getPassword().equals(password))
+		{
+
+		%>
+		
+			<jsp:forward page="admin.jsp" />
+<%
+		}
+		else
+		{
+		%>
+		
+			<jsp:forward page="homepage.jsp" />
+<%
+
+		}
+		}catch(Exception e)
+{
+%>
+hello
+<%
+}
+%>
+</body>
+</html>

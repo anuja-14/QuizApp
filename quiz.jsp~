@@ -6,33 +6,14 @@
 function validate(frm)
 {
 var flag=true;
-if(frm.username.value=="")
+if(frm.option.value=="")
 	{
-	alert("USERID CAN NOT BE NULL");
-	flag=false;
-	}	
-if(frm.password.value=="")
-	{
-	alert("PASSWORD CAN NOT BE NULL");
-	flag=false;
-	}
-	if(frm.email.value=="")
-	{
-	alert("Email-id CAN NOT BE NULL");
-	flag=false;
-	}	
-if(frm.repassword.value=="")
-	{
-	alert("repassword CAN NOT BE NULL");
-	flag=false;
-	}	
-	if(!(frm.password.value==frm.repassword.value))
-	{
-	alert("Passwords do not match");
+	alert("Please Select One Answer ");
 	flag=false;
 	}	
 return flag;
 }
+
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Shaastra-Distro Quizzing App</title>
@@ -49,7 +30,7 @@ return flag;
             <li><a href="result.jsp" target="_parent">Result</a></li>
             <li><a href="password.jsp" target="_parent">Forgot Password?</a></li>
             <li><a href="new_user.jsp" target="_blank">Register Here</a></li>
-       
+            <li><a href="homepage.jsp" target="_blank">LogOut</a></li>
            
         </ul>    	
     </div> <!-- end of templatemo_menu -->
@@ -96,31 +77,19 @@ int id=qs.getId();
 
 <table align="center">
 <tr>
-<b><font color="red"><p align=right>* fields are mandatory</p><br/><br/></font></b>
-</tr>
-<tr>
 <td colspan=10>
 </td>
-<td background="qq_bod_cnter_x.jpg" width="1200" height="335" bgcolor="silver">
-<center><br>
-<form method="get" action="New_account" onsubmit="return validate(this)">
-First Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="firstName" ><br /><br />
-Last Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="lastName" ><br /><br />
-*Email-ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="email" ><br /><br />
-*UserName &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="username" ><br /><br />
-*Password &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="password" name="password" ><br /><br />
-*Re-password &nbsp; &nbsp; &nbsp; &nbsp;<input type="password" name="repassword" ><br /><br />
-ContactNumber &nbsp; &nbsp; &nbsp;<input type="text" name="contactNumber" ><br /><br />
-
-</td>
-</tr>
-<tr>
-<td colspan =10>
-</td>
-<td>
-
-<center> <input type=submit value=Submit name=submit></center> 
-</form>
+<td background="qq_bod_cnter_x.jpg" width="700" height="335" bgcolor="silver">
+<center>
+<form method="get" action="Quiz" onsubmit="return validate(this)"><br> <br><br>
+<h3>
+<%= qs.getQue()%><br><br>
+<INPUT TYPE="radio" NAME="option" value="a" /><%= qs.getOpt1()%><br><br>
+<INPUT TYPE="radio" NAME="option" value="b" /><%= qs.getOpt2()%><br><br>
+<INPUT TYPE="radio" NAME="option" value="c" /><%= qs.getOpt3()%><br><br>
+<INPUT TYPE="radio" NAME="option" value="d" /><%= qs.getOpt4()%><br><br>
+<input type="submit" name="submit" value="Submit"></center> 
+</form><h3>
 </td>
 </tr>
 </table>
@@ -132,7 +101,7 @@ ContactNumber &nbsp; &nbsp; &nbsp;<input type="text" name="contactNumber" ><br /
             
             <div class="service_box float_r">
             
-            	<div class="service_image"file:///var/lib/tomcat6/webapps/QuizApp/index.html>
+            	<div class="service_image">
                  </div>
                  <div class="service_text">
                      
@@ -181,4 +150,3 @@ ContactNumber &nbsp; &nbsp; &nbsp;<input type="text" name="contactNumber" ><br /
 </div> <!-- end of templatemo_wrapper -->
 </body>
 </html>
-

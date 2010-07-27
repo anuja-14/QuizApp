@@ -74,7 +74,7 @@ return flag;
             	<div class="service_image">
                  </div>
                  <div class="service_text">
-                     <h2>Choose Your Level</h2>
+                     <h2>Login Here</h2>
                      <%
 String error = (String)request.getAttribute("err");
 if(!(error==null))
