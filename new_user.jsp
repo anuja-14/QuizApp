@@ -79,21 +79,7 @@ return flag;
                  
                  <div class="service_text">
                       <font color=red>
-  <%
-String comment = (String)request.getAttribute("comment_submit");
-if(!(comment==null))
-{ 
-%>
-<%= comment%>
-<%
-}
-%>
- <%
-QuestionsDTO qs = new QuestionsDTO();
-qs = (QuestionsDTO)session.getAttribute("qs");
-int id=qs.getId();
-%>
-
+ 
 <table align="center">
 <tr>
 <b><font color="red"><p align=right>* fields are mandatory</p><br/><br/></font></b>
