@@ -67,6 +67,7 @@ int i;
 	
 	%>
 	</table> 
+	<br>
 	<a href="modify.jsp?diff=1"><input type=button value=Add name=add ></a> 
 <input type=submit value=Delete name=delete><br><br>
 </form> 
@@ -132,6 +133,8 @@ int i;
 	
 	%>
 	</table> 
+	<br>
+
 	<a href="modify.jsp?diff=2"><input type=button value=Add name=add ></a> 
 <input type=submit value=Delete name=delete><br><br>
 </form> 
@@ -197,6 +200,8 @@ int i;
 	
 	%>
 	</table> 
+	<br>
+
 	<a href="modify.jsp?diff=3"><input type=button value=Add name=add ></a> 
 <input type=submit value=Delete name=delete><br><br>
 </form> 
