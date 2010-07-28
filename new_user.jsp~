@@ -45,7 +45,7 @@ return flag;
 
     <div id="templatemo_menu">
         <ul>
-            <li><a href="#" class="current">Home</a></li>
+            <li><a href="homepage.jsp" class="current">Home</a></li>
             <li><a href="result.jsp" target="_parent">Result</a></li>
             <li><a href="password.jsp" target="_parent">Forgot Password?</a></li>
             <li><a href="new_user.jsp" target="_blank">Register Here</a></li>
@@ -79,21 +79,7 @@ return flag;
                  
                  <div class="service_text">
                       <font color=red>
-  <%
-String comment = (String)request.getAttribute("comment_submit");
-if(!(comment==null))
-{ 
-%>
-<%= comment%>
-<%
-}
-%>
- <%
-QuestionsDTO qs = new QuestionsDTO();
-qs = (QuestionsDTO)session.getAttribute("qs");
-int id=qs.getId();
-%>
-
+ 
 <table align="center">
 <tr>
 <b><font color="red"><p align=right>* fields are mandatory</p><br/><br/></font></b>

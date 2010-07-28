@@ -1,4 +1,4 @@
-<%@ page import="question_info.*" %>
+<%@ page import="question_info.*,login.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -26,11 +26,11 @@ return flag;
 
     <div id="templatemo_menu">
         <ul>
-            <li><a href="#" class="current">Home</a></li>
+            <li><a href="homepage.jsp" class="current">Home</a></li>
             <li><a href="result.jsp" target="_parent">Result</a></li>
             <li><a href="password.jsp" target="_parent">Forgot Password?</a></li>
             <li><a href="new_user.jsp" target="_blank">Register Here</a></li>
-            <li><a href="homepage.jsp" target="_blank">LogOut</a></li>
+            <li><a href="logout" target="_blank">LogOut</a></li>
            
         </ul>    	
     </div> <!-- end of templatemo_menu -->
@@ -73,6 +73,9 @@ if(!(comment==null))
 QuestionsDTO qs = new QuestionsDTO();
 qs = (QuestionsDTO)session.getAttribute("qs");
 int id=qs.getId();
+UserDTO us = (UserDTO) session.getAttribute("UserDTO");
+		String name=us.getUsername();
+		
 %>
 
 <table align="center">
@@ -81,15 +84,15 @@ int id=qs.getId();
 </td>
 <td background="qq_bod_cnter_x.jpg" width="700" height="335" bgcolor="silver">
 <center>
-<form method="get" action="Quiz" onsubmit="return validate(this)"><br> <br><br>
-<h3>
+<form method="post" action="Quiz" onsubmit="return validate(this)"><br> <br><br>
+<h3>You Are Logged In As <%= name %> </h3> 
 <%= qs.getQue()%><br><br>
 <INPUT TYPE="radio" NAME="option" value="a" /><%= qs.getOpt1()%><br><br>
 <INPUT TYPE="radio" NAME="option" value="b" /><%= qs.getOpt2()%><br><br>
 <INPUT TYPE="radio" NAME="option" value="c" /><%= qs.getOpt3()%><br><br>
 <INPUT TYPE="radio" NAME="option" value="d" /><%= qs.getOpt4()%><br><br>
 <input type="submit" name="submit" value="Submit"></center> 
-</form><h3>
+</form></h3>
 </td>
 </tr>
 </table>

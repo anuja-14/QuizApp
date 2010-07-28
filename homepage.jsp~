@@ -30,11 +30,12 @@ return flag;
 
     <div id="templatemo_menu">
         <ul>
-            <li><a href="#" class="current">Home</a></li>
+            <li><a href="homepage.jsp" class="current">Home</a></li>
             <li><a href="result.jsp" target="_parent">Result</a></li>
             <li><a href="password.jsp" target="_parent">Forgot Password?</a></li>
             <li><a href="new_user.jsp" target="_blank">Register Here</a></li>
-            <li><a href="homepage.jsp" target="_blank">LogOut</a></li>
+            <li><a href="logout" target="_blank">LogOut</a></li>
+            <li><a href="" target="_blank">Administrative Interface</a></li>
            
         </ul>    	
     </div> <!-- end of templatemo_menu -->
@@ -86,7 +87,7 @@ if(!(error==null))
 <%
 }
 %> 
-                     <form method="get" action="loginctl" onsubmit="return validate(this)">
+                     <form method="post" action="loginctl" onsubmit="return validate(this)">
 UserName<input type="text" name="username" ><br /><br />
 Password<input type="password" name="password"><br /><br />
 <center><input type="submit" value="LOGIN" ></center>
@@ -131,7 +132,7 @@ Linux.
                 
                 <ul class="recent_project">
                     
-                    Daskalos :
+                    <b> Daskalos :</b>
                     <li><a href="http://www.shaastra.org/2010/main/events/coding/distro" target="_parent"><img src="images/templatemo_image_03.jpg" alt="image 3" /></a></li>
                         An application which is aimed at teaching you the basics of 
 
@@ -151,7 +152,7 @@ Linux.
               	</ul>  <br /><br /><br /><br />
                 <ul class="recent_project">
                     
-                    Shellom :
+                    <b>Shellom :</b>
                     <li><a href="http://www.shaastra.org/2010/main/events/coding/distro" target="_parent"><img src="images/templatemo_image_06.jpg" alt="image 3" /></a></li>
                        Shellom is a tool to automate multi-step workflows by using a collection
 of simple tasks by interconnecting inputs and outputs to other inputs.
@@ -161,6 +162,13 @@ you do this multiple times in succession ...... and a lot more. Shellom is our w
 showing you how the power of the BASH and Python can be used to simplify our lives
 in a way bigger than what is illustrated in most magazines and articles.
               	</ul>  
+ <div class="news_box">
+                    
+              </div>
+                
+          <div class="news_box">
+                    
+                </div>              
               <div class="cleaner_h20"></div>
                  
             </div>
@@ -175,9 +183,7 @@ in a way bigger than what is illustrated in most magazines and articles.
 
        
     
-        
        
-        	 
     
     </div> <!-- end of footer -->
 

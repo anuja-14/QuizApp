@@ -20,7 +20,7 @@ public class QuestionsDTO {
 			// TODO Auto-generated constructor stub
 		}
 
-		public QuestionsDTO(int id,String que,String opt1,String opt2,String opt3,String opt4,String diff,String ans,String comments)
+		public QuestionsDTO(int id,String que,String diff,String opt1,String opt2,String opt3,String opt4,String ans,String comments)
 		{
 			this.id=id;
 			this.que=que;
@@ -29,6 +29,8 @@ public class QuestionsDTO {
 			this.opt3=opt3;
 			this.opt4=opt4;
 			this.diff=diff;
+			this.ans=ans;
+			this.comments=comments;
 		}
 
 
