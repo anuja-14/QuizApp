@@ -49,7 +49,7 @@ return flag;
             <li><a href="result.jsp" target="_parent">Result</a></li>
             <li><a href="password.jsp" target="_parent">Forgot Password?</a></li>
             <li><a href="new_user.jsp" target="_blank">Register Here</a></li>
-       
+        <li><a href="admin.jsp" target="_blank">Administrative Interface</a></li>
            
         </ul>    	
     </div> <!-- end of templatemo_menu -->

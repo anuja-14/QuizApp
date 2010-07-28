@@ -3,6 +3,7 @@
 <html>
 <head>
 <b><u><big><center> <font color=blue> <br><br>Admin-Interface</font></center></b></u></big> 
+<p align=right> <font color=red> Click On The Id To Modify A Question </font></p> 
 </head>
 <body background=images.jpeg>
 <h2><font color=blue> Beginners </font></h2> 
