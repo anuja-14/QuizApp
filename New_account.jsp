@@ -6,7 +6,7 @@
 <b>
 </b>
 Welcome, your login Account has been 
-<form method="get" action="homepage.jsp" >
+<form method="post" action="homepage.jsp" >
 <center><input type="submit" value="Login now"></center>
 
 </form>

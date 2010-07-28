@@ -34,7 +34,7 @@ return flag;
             <li><a href="result.jsp" target="_parent">Result</a></li>
             <li><a href="password.jsp" target="_parent">Forgot Password?</a></li>
             <li><a href="new_user.jsp" target="_blank">Register Here</a></li>
-            <li><a href="homepage.jsp" target="_blank">LogOut</a></li>
+            <li><a href="logout" target="_blank">LogOut</a></li>
            
         </ul>    	
     </div> <!-- end of templatemo_menu -->
@@ -86,7 +86,7 @@ if(!(error==null))
 <%
 }
 %> 
-                     <form method="get" action="loginctl" onsubmit="return validate(this)">
+                     <form method="post" action="loginctl" onsubmit="return validate(this)">
 UserName<input type="text" name="username" ><br /><br />
 Password<input type="password" name="password"><br /><br />
 <center><input type="submit" value="LOGIN" ></center>
@@ -161,6 +161,13 @@ you do this multiple times in succession ...... and a lot more. Shellom is our w
 showing you how the power of the BASH and Python can be used to simplify our lives
 in a way bigger than what is illustrated in most magazines and articles.
               	</ul>  
+ <div class="news_box">
+                    
+              </div>
+                
+          <div class="news_box">
+                    
+                </div>              
               <div class="cleaner_h20"></div>
                  
             </div>
@@ -175,9 +182,7 @@ in a way bigger than what is illustrated in most magazines and articles.
 
        
     
-        
        
-        	 
     
     </div> <!-- end of footer -->
 

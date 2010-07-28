@@ -89,7 +89,7 @@ return flag;
 </td>
 <td background="qq_bod_cnter_x.jpg" width="1200" height="335" bgcolor="silver">
 <center><br>
-<form method="get" action="New_account" onsubmit="return validate(this)">
+<form method="post" action="New_account" onsubmit="return validate(this)">
 First Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="firstName" ><br /><br />
 Last Name &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="lastName" ><br /><br />
 *Email-ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="email" ><br /><br />

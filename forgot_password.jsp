@@ -6,7 +6,7 @@
 <body>
 <b>Your username and password is Successfully send to your email-id
 </b>
-<form method="get" action="homepage.jsp" >
+<form method="post" action="homepage.jsp" >
 <center><input type="submit" value="Login again"></center>
 
 </form>

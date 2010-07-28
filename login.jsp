@@ -1,3 +1,4 @@
+<%@ page import="login.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -25,7 +26,8 @@ return flag;
 <meta name="description" content="Metal Curve Template is a free layout for everyone. All free CSS templates are provided by templatemo.com" />
 <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body>UserDTO us = (UserDTO) session.getAttribute("UserDTO");
+		String name=us.getFirstName();
 <div id="templatemo_wrapper">
 
     <div id="templatemo_menu">
@@ -34,7 +36,7 @@ return flag;
             <li><a href="result.jsp" target="_parent">Result</a></li>
             <li><a href="password.jsp" target="_parent">Forgot Password?</a></li>
             <li><a href="new_user.jsp" target="_blank">Register Here</a></li>
-            <li><a href="homepage.jsp" target="_blank">LogOut</a></li>
+            <li><a href="logout" target="_blank">LogOut</a></li>
            
         </ul>    	
     </div> <!-- end of templatemo_menu -->
@@ -74,6 +76,12 @@ return flag;
             	<div class="service_image">
                  </div>
                  <div class="service_text">
+                 <%
+                 UserDTO us = (UserDTO) session.getAttribute("UserDTO");
+		String name=us.getUsername();
+		
+                 %>
+                 <h3> You Are Logged In As <%= name %> </h3> 
                      <h2>Choose Your Level</h2>
                      <%
 String error = (String)request.getAttribute("err");
@@ -85,8 +93,11 @@ if(!(error==null))
 </font>
 <%
 }
+
+
 %> 
-                    <form action="levelctl" method="get">
+
+                    <form action="levelctl" method="post">
  <big><input type="submit" name="level" value="BEGINNERS" \></big><br /><br />
  <big><input type="submit" name="level" value="MEDIOCHERS" \><br /><br /></big>
   <big><input type="submit" name="level" value="CHAMPION" \></big>

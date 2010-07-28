@@ -62,8 +62,28 @@ servlet.Quiz
 <servlet-mapping>
 <servlet-name>quiz</servlet-name>
 <url-pattern>/Quiz</url-pattern>
+</servlet-mapping>	
+<servlet>
+<servlet-name>logout</servlet-name>
+<servlet-class>
+servlet.Logout
+</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>logout</servlet-name>
+<url-pattern>/logout</url-pattern>
 </servlet-mapping>
-	
+<filter id="filter1">
+<filter-name>Logincheck</filter-name>
+<filter-class>servlet.Myfilter</filter-class> 
+</filter>
+<filter-mapping>
+<filter-name>
+Logincheck
+</filter-name>
+<servlet-name>Levelctl</servlet-name>
+<servlet-name>quiz</servlet-name>
+</filter-mapping>
 </web-app>
 
 
