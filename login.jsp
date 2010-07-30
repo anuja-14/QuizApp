@@ -35,7 +35,7 @@ return flag;
             <li><a href="password.jsp" target="_parent">Forgot Password?</a></li>
             <li><a href="new_user.jsp" target="_blank">Register Here</a></li>
             <li><a href="logout" target="_blank">LogOut</a></li>
-            <li><a href="admin.jsp" target="_blank">Administrative Interface</a></li>
+            <li><a href="login_admin.jsp" target="_blank">Administrative Interface</a></li>
         </ul>    	
     </div> <!-- end of templatemo_menu -->
     
@@ -97,7 +97,7 @@ if(!(error==null))
 
                     <form action="levelctl" method="post">
  <big><input type="submit" name="level" value="BEGINNERS" \></big><br /><br />
- <big><input type="submit" name="level" value="MEDIOCER" \><br /><br /></big>
+ <big><input type="submit" name="level" value="MEDIOCRE" \><br /><br /></big>
   <big><input type="submit" name="level" value="CHAMPION" \></big>
  </form>
 </form>
