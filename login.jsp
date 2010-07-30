@@ -26,14 +26,12 @@ return flag;
 <meta name="description" content="Metal Curve Template is a free layout for everyone. All free CSS templates are provided by templatemo.com" />
 <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
 </head>
-<body>UserDTO us = (UserDTO) session.getAttribute("UserDTO");
-		String name=us.getFirstName();
+<body>
 <div id="templatemo_wrapper">
 
     <div id="templatemo_menu">
         <ul>
             <li><a href="homepage.jsp" class="current">Home</a></li>
-            <li><a href="result.jsp" target="_parent">Result</a></li>
             <li><a href="password.jsp" target="_parent">Forgot Password?</a></li>
             <li><a href="new_user.jsp" target="_blank">Register Here</a></li>
             <li><a href="logout" target="_blank">LogOut</a></li>
@@ -99,7 +97,7 @@ if(!(error==null))
 
                     <form action="levelctl" method="post">
  <big><input type="submit" name="level" value="BEGINNERS" \></big><br /><br />
- <big><input type="submit" name="level" value="MEDIOCHERS" \><br /><br /></big>
+ <big><input type="submit" name="level" value="MEDIOCER" \><br /><br /></big>
   <big><input type="submit" name="level" value="CHAMPION" \></big>
  </form>
 </form>

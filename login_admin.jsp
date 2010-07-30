@@ -1,4 +1,3 @@
-<%@ page import="login.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -26,17 +25,14 @@ return flag;
 <meta name="description" content="Metal Curve Template is a free layout for everyone. All free CSS templates are provided by templatemo.com" />
 <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
 </head>
-<body>UserDTO us = (UserDTO) session.getAttribute("UserDTO");
-		String name=us.getFirstName();
+<body>
 <div id="templatemo_wrapper">
 
     <div id="templatemo_menu">
         <ul>
             <li><a href="homepage.jsp" class="current">Home</a></li>
-            <li><a href="result.jsp" target="_parent">Result</a></li>
             <li><a href="password.jsp" target="_parent">Forgot Password?</a></li>
             <li><a href="new_user.jsp" target="_blank">Register Here</a></li>
-            <li><a href="logout" target="_blank">LogOut</a></li>
            
         </ul>    	
     </div> <!-- end of templatemo_menu -->
@@ -76,13 +72,7 @@ return flag;
             	<div class="service_image">
                  </div>
                  <div class="service_text">
-                 <%
-                 UserDTO us = (UserDTO) session.getAttribute("UserDTO");
-		String name=us.getUsername();
-		
-                 %>
-                 <h3> You Are Logged In As <%= name %> </h3> 
-                     <h2>Choose Your Level</h2>
+                     <h2>Administration Login</h2>
                      <%
 String error = (String)request.getAttribute("err");
 if(!(error==null))
@@ -93,15 +83,12 @@ if(!(error==null))
 </font>
 <%
 }
-
-
 %> 
+                     <form method="post" action="adminlogin" onsubmit="return validate(this)">
+Admin-UserName<input type="text" name="admin_username" ><br /><br />
+Password<input type="password" name="admin_password"><br /><br />
+<center><input type="submit" value="LOGIN" ></center>
 
-                    <form action="levelctl" method="get">
- <big><input type="submit" name="level" value="BEGINNERS" \></big><br /><br />
- <big><input type="submit" name="level" value="MEDIOCHERS" \><br /><br /></big>
-  <big><input type="submit" name="level" value="CHAMPION" \></big>
- </form>
 </form>
                     
                  </div>
@@ -142,7 +129,7 @@ Linux.
                 
                 <ul class="recent_project">
                     
-                    Daskalos
+                    <b> Daskalos :</b>
                     <li><a href="http://www.shaastra.org/2010/main/events/coding/distro" target="_parent"><img src="images/templatemo_image_03.jpg" alt="image 3" /></a></li>
                         An application which is aimed at teaching you the basics of 
 
@@ -162,7 +149,7 @@ Linux.
               	</ul>  <br /><br /><br /><br />
                 <ul class="recent_project">
                     
-                    Shellom
+                    <b>Shellom :</b>
                     <li><a href="http://www.shaastra.org/2010/main/events/coding/distro" target="_parent"><img src="images/templatemo_image_06.jpg" alt="image 3" /></a></li>
                        Shellom is a tool to automate multi-step workflows by using a collection
 of simple tasks by interconnecting inputs and outputs to other inputs.
@@ -172,6 +159,13 @@ you do this multiple times in succession ...... and a lot more. Shellom is our w
 showing you how the power of the BASH and Python can be used to simplify our lives
 in a way bigger than what is illustrated in most magazines and articles.
               	</ul>  
+ <div class="news_box">
+                    
+              </div>
+                
+          <div class="news_box">
+                    
+                </div>              
               <div class="cleaner_h20"></div>
                  
             </div>
@@ -186,9 +180,7 @@ in a way bigger than what is illustrated in most magazines and articles.
 
        
     
-        
        
-        	 
     
     </div> <!-- end of footer -->
 

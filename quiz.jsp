@@ -6,9 +6,9 @@
 function validate(frm)
 {
 var flag=true;
-if(frm.option.value=="")
-	{
-	alert("Please Select One Answer ");
+if (document.forms.myform.elements.option.value == "")
+{
+	alert("No radiobutton selected..."); 
 	flag=false;
 	}	
 return flag;
@@ -60,15 +60,7 @@ return flag;
                  
                  <div class="service_text">
                       <font color=red>
-  <%
-String comment = (String)request.getAttribute("comment_submit");
-if(!(comment==null))
-{ 
-%>
-<%= comment%>
-<%
-}
-%>
+  
  <%
 QuestionsDTO qs = new QuestionsDTO();
 qs = (QuestionsDTO)session.getAttribute("qs");
@@ -84,8 +76,7 @@ UserDTO us = (UserDTO) session.getAttribute("UserDTO");
 </td>
 <td background="qq_bod_cnter_x.jpg" width="700" height="335" bgcolor="silver">
 <center>
-<form method="post" action="Quiz" onsubmit="return validate(this)"><br> <br><br>
-<h3>You Are Logged In As <%= name %> </h3> 
+<form method="post" action="Quiz" onsubmit="return validate(this) name="myform"><br> <br><br>
 <%= qs.getQue()%><br><br>
 <INPUT TYPE="radio" NAME="option" value="a" /><%= qs.getOpt1()%><br><br>
 <INPUT TYPE="radio" NAME="option" value="b" /><%= qs.getOpt2()%><br><br>
@@ -107,8 +98,26 @@ UserDTO us = (UserDTO) session.getAttribute("UserDTO");
             	<div class="service_image">
                  </div>
                  <div class="service_text">
-                     
-                 </div>
+                 <h3>You Are Logged In As <%= name %> </h3> 
+                     <%
+String comment = (String)request.getAttribute("comment_submit");
+if(!(comment==null))
+{ 
+%>
+<h3> <font color="red"> <%= comment%> </font>
+<%
+}
+%><br><br><br>
+  <%
+String qs_comment = (String)request.getAttribute("comment");
+if(!(qs_comment==null))
+{ 
+%>
+<%= qs_comment%>
+<%
+}
+%>     
+</h3>          </div>
             	
             </div>
         	
