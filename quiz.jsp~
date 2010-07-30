@@ -1,7 +1,20 @@
+	<%@ page import="question_info.*,login.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<script type="text/javascript">
+function validate(frm)
+{
+var flag=true;
+if (document.forms.myform.elements.option.value == "")
+{
+	alert("No radiobutton selected..."); 
+	flag=false;
+	}	
+return flag;
+}
 
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Shaastra-Distro Quizzing App</title>
 <meta name="keywords" content="free website templates, css templates, Metal Curve" />
@@ -14,10 +27,11 @@
     <div id="templatemo_menu">
         <ul>
             <li><a href="homepage.jsp" class="current">Home</a></li>
+            <li><a href="result.jsp" target="_parent">Result</a></li>
             <li><a href="password.jsp" target="_parent">Forgot Password?</a></li>
             <li><a href="new_user.jsp" target="_blank">Register Here</a></li>
-        <li><a href="login_admin.jsp" target="_blank">Administrative Interface</a></li>
-           
+            <li><a href="logout" target="_blank">LogOut</a></li>
+            <li><a href="login_admin.jsp" target="_blank">Administrative Interface</a></li>
         </ul>    	
     </div> <!-- end of templatemo_menu -->
     
@@ -46,38 +60,30 @@
                  
                  <div class="service_text">
                       <font color=red>
- 
-<table align="center">
-<tr>
-<b><font color=red>
-<%
-if(!(request.getAttribute("error")==null))
-{
+  
+ <%
+QuestionsDTO qs = new QuestionsDTO();
+qs = (QuestionsDTO)session.getAttribute("qs");
+int id=qs.getId();
+UserDTO us = (UserDTO) session.getAttribute("UserDTO");
+		String name=us.getUsername();
+		
 %>
-<%= request.getAttribute("error")%><br><br>
-<%
-}
-%></font></b>
-</tr>
+
+<table align="center">
 <tr>
 <td colspan=10>
 </td>
-<td background="qq_bod_cnter_x.jpg" width="1200" height="335" bgcolor="silver">
-<center><br>
-<b>Your username and password is Successfully send to your email-id
-</b>
-<br>
-<form method="post" action="homepage.jsp" >
-<center><input type="submit" value="Login again"></center>
-
-</form>
-
-</td>
-</tr>
-<tr>
-<td colspan =10>
-</td>
-
+<td background="qq_bod_cnter_x.jpg" width="700" height="335" bgcolor="silver">
+<center>
+<form method="post" action="Quiz" onsubmit="return validate(this) name="myform"><br> <br><br>
+<%= qs.getQue()%><br><br>
+<INPUT TYPE="radio" NAME="option" value="a" /><%= qs.getOpt1()%><br><br>
+<INPUT TYPE="radio" NAME="option" value="b" /><%= qs.getOpt2()%><br><br>
+<INPUT TYPE="radio" NAME="option" value="c" /><%= qs.getOpt3()%><br><br>
+<INPUT TYPE="radio" NAME="option" value="d" /><%= qs.getOpt4()%><br><br>
+<input type="submit" name="submit" value="Submit"></center> 
+</form></h3>
 </td>
 </tr>
 </table>
@@ -89,11 +95,29 @@ if(!(request.getAttribute("error")==null))
             
             <div class="service_box float_r">
             
-            	<div class="service_image"file:///var/lib/tomcat6/webapps/QuizApp/index.html>
+            	<div class="service_image">
                  </div>
                  <div class="service_text">
-                     
-                 </div>
+                 <h3>You Are Logged In As <%= name %> </h3> 
+                     <%
+String comment = (String)request.getAttribute("comment_submit");
+if(!(comment==null))
+{ 
+%>
+<h3> <font color="red"> <%= comment%> </font>
+<%
+}
+%><br><br><br>
+  <%
+String qs_comment = (String)request.getAttribute("comment");
+if(!(qs_comment==null))
+{ 
+%>
+<%= qs_comment%>
+<%
+}
+%>     
+</h3>          </div>
             	
             </div>
         	
@@ -138,4 +162,3 @@ if(!(request.getAttribute("error")==null))
 </div> <!-- end of templatemo_wrapper -->
 </body>
 </html>
-

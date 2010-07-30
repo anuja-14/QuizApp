@@ -1,3 +1,4 @@
+<%@ page import="question_info.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -14,10 +15,11 @@
     <div id="templatemo_menu">
         <ul>
             <li><a href="homepage.jsp" class="current">Home</a></li>
+            <li><a href="result.jsp" target="_parent">Result</a></li>
             <li><a href="password.jsp" target="_parent">Forgot Password?</a></li>
             <li><a href="new_user.jsp" target="_blank">Register Here</a></li>
-        <li><a href="login_admin.jsp" target="_blank">Administrative Interface</a></li>
-           
+				<li><a href="logout" target="_blank">LogOut</a></li>       
+            <li><a href="login_admin.jsp" target="_blank">Administrative Interface</a></li>
         </ul>    	
     </div> <!-- end of templatemo_menu -->
     
@@ -45,44 +47,28 @@
                  </div>
                  
                  <div class="service_text">
-                      <font color=red>
- 
-<table align="center">
-<tr>
-<b><font color=red>
-<%
-if(!(request.getAttribute("error")==null))
-{
+                    
+ <center>
+  
+  <%
+String qs_answered = (String)session.getAttribute("qs_attempted");
+String corr_answered = (String)session.getAttribute("correct_ans");
 %>
-<%= request.getAttribute("error")%><br><br>
-<%
-}
-%></font></b>
-</tr>
+
+<table>
 <tr>
-<td colspan=10>
-</td>
-<td background="qq_bod_cnter_x.jpg" width="1200" height="335" bgcolor="silver">
-<center><br>
-<b>Your username and password is Successfully send to your email-id
-</b>
-<br>
-<form method="post" action="homepage.jsp" >
-<center><input type="submit" value="Login again"></center>
-
-</form>
+<td colspan="10">
 
 </td>
-</tr>
-<tr>
-<td colspan =10>
-</td>
+
+<td background="qq_bod_cnter_x.jpg" width="700" height="335" bgcolor="silver">
+<center> 
+<font color=red><h1>You Have Answered <%= corr_answered%> Question Correctly Out of <%=qs_answered%> </h1></b></font>
 
 </td>
+</center> 
 </tr>
 </table>
-</center> 
-</font> 
                  </div>
                  
             </div>

@@ -93,7 +93,18 @@ servlet.add_modify
 <servlet-name>add_modify</servlet-name>
 <url-pattern>/add_modify</url-pattern>
 </servlet-mapping>
-<filter id="filter1">
+<servlet>
+<servlet-name>adminlogin</servlet-name>
+<servlet-class>
+servlet.Adminlogin
+</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>adminlogin</servlet-name>
+<url-pattern>/adminlogin</url-pattern>
+</servlet-mapping>
+
+<filter>
 <filter-name>Logincheck</filter-name>
 <filter-class>servlet.Myfilter</filter-class> 
 </filter>
@@ -104,6 +115,16 @@ Logincheck
 <servlet-name>Levelctl</servlet-name>
 <servlet-name>quiz</servlet-name>
 </filter-mapping>
+<!-- <filter>
+<filter-name>AdminLogincheck</filter-name>
+<filter-class>servlet.Admin_filter</filter-class>
+</filter>
+<filter-mapping>
+<filter-name>
+AdminLogincheck</filter-name>
+<servlet-name>adminlogin</servlet-name>
+</filter-mapping>--> 
+
 </web-app>
 
 

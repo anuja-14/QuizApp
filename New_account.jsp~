@@ -64,13 +64,13 @@ if(!(request.getAttribute("error")==null))
 </td>
 <td background="qq_bod_cnter_x.jpg" width="1200" height="335" bgcolor="silver">
 <center><br>
-<b>Your username and password is Successfully send to your email-id
-</b>
-<br>
+<b> 
+Welcome, your login Account has been Created</b>  
 <form method="post" action="homepage.jsp" >
-<center><input type="submit" value="Login again"></center>
+<center><input type="submit" value="Login now"></center>
 
 </form>
+
 
 </td>
 </tr>
